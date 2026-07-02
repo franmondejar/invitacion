@@ -71,41 +71,48 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 999;
-  animation: cerrarScanner 2s ease-in-out forwards;
+  animation: cerrarScanner 2.4s ease-in-out forwards;
 }
 
 #scanner img {
-  width: 120px;
+  width: 180px;
   opacity: 0;
-  animation: pulsoHuella 1.2s ease forwards;
+  animation: pulsoHuella 1.6s ease-in-out forwards;
 }
 
 @keyframes pulsoHuella {
   0% {
     opacity: 0;
-    transform: scale(0.85);
+    transform: scale(0.75);
     filter: brightness(1);
   }
 
-  30% {
+  25% {
     opacity: 1;
     transform: scale(1);
   }
 
-  55% {
+  50% {
     opacity: 1;
-    filter: brightness(2.8) drop-shadow(0 0 25px #63D6A5);
+    transform: scale(1.08);
+    filter: brightness(3) drop-shadow(0 0 35px #63D6A5);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1.4) drop-shadow(0 0 12px #63D6A5);
   }
 
   100% {
-    opacity: 1;
-    transform: scale(1);
+    opacity: 0;
+    transform: scale(1.15);
     filter: brightness(1);
   }
 }
 
 @keyframes cerrarScanner {
-  0%, 75% {
+  0%, 65% {
     opacity: 1;
     visibility: visible;
   }
@@ -116,4 +123,3 @@ body {
     pointer-events: none;
   }
 }
-
